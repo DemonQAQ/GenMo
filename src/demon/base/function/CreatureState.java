@@ -6,12 +6,23 @@ package demon.base.function;
  * @Date:2021/12/27 16:58
  * @Description:
  */
-public class PlayerState
+public class CreatureState
 {
     private boolean fly = false;
     private boolean attack = false;
     private boolean run = false;
     private boolean idle = true;
+    private boolean hurt = false;
+
+    public boolean isHurt()
+    {
+        return hurt;
+    }
+
+    public void setHurt(boolean hurt)
+    {
+        this.hurt = hurt;
+    }
 
     public boolean isRun()
     {
@@ -33,7 +44,7 @@ public class PlayerState
         this.idle = idle;
     }
 
-    public PlayerState(){}
+    public CreatureState(){}
 
     public boolean isFly()
     {

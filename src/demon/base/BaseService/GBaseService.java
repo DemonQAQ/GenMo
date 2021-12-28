@@ -44,4 +44,9 @@ public abstract class GBaseService<T> implements BaseService<T>
     {
 
     }
+
+    public void action()
+    {
+
+    }
 }

@@ -36,7 +36,7 @@ public class Sprite implements GDraw
         this.direction = ann.direction();
         this.width = ann.width();
         this.height = ann.height();
-        String imageName = ann.value().equals(Element.NOTHING) ? ann.leftImage() : ann.value();
+        String imageName = ann.value().equals(Element.NOTHING) ? ann.Image() : ann.value();
         this.Image = CommonUtils.getImage(imageName);
     }
 
@@ -59,6 +59,7 @@ public class Sprite implements GDraw
     {
         g.drawImage(this.getImage(), this.x, this.y, this.width, this.height, null);
     }
+    public boolean removeSprite(){return false;}
 
     public int getX()
     {

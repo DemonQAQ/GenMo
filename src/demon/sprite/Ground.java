@@ -12,7 +12,7 @@ import demon.util.Constant;
  * @Date:2021/12/27 8:58
  * @Description:
  */
-@Element(width = 1080,height = 80,direction = Direction.RIGHT)
+@Element(width = 1080,height = 129,direction = Direction.RIGHT)
 public class Ground extends MotionlessSprite
 {
     public Ground(String name)

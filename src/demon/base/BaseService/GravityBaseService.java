@@ -10,7 +10,9 @@ import demon.base.function.Gravity;
  */
 public class GravityBaseService extends GBaseService<Gravity>
 {
-    private final static float g = 0.098f;
+    private final static float g = 0.15f;
+
+    public GravityBaseService(){}
 
     public void universalGravitation()
     {

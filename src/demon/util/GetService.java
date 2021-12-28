@@ -1,8 +1,11 @@
 package demon.util;
 
+import demon.base.BaseService.CreatureBaseService;
+import demon.base.BaseService.DamageBaseService;
 import demon.base.BaseService.GravityBaseService;
 import demon.base.BaseService.GroundBaseService;
 import demon.base.function.BaseService;
+import demon.sprite.DamageRectangleSprite;
 
 /*
  * GenMo demon.util
@@ -12,8 +15,10 @@ import demon.base.function.BaseService;
  */
 public enum GetService
 {
-    Gravity(new GravityBaseService()),//重力
-    GROUND(new GroundBaseService());
+    GRAVITY(new GravityBaseService()),//重力
+    GROUND(new GroundBaseService()),
+    CREATURE(new CreatureBaseService()),
+    DAMAGE(new DamageBaseService());
 
     private GetService(BaseService service)
     {
@@ -44,6 +49,18 @@ public enum GetService
 
     public static GravityBaseService getGravity()
     {
-        return (GravityBaseService) GetService.Gravity.getService();
+        return (GravityBaseService) GetService.GRAVITY.getService();
     }
+
+
+    public static CreatureBaseService getCreature()
+    {
+        return (CreatureBaseService) GetService.CREATURE.getService();
+    }
+
+    public static DamageBaseService getDamage()
+    {
+        return (DamageBaseService) GetService.DAMAGE.getService();
+    }
+
 }

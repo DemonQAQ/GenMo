@@ -1,5 +1,6 @@
 package demon.sprite;
 
+import demon.base.function.Element;
 import demon.base.function.Gravity;
 
 /*
@@ -14,11 +15,19 @@ public class GravityMotionSprite extends MotionSprite implements Gravity
 
     GravityMotionSprite()
     {
+        Element ann = this.getClass().getAnnotation(Element.class);
+        setXSpeed(0);
+        this.xAcceleration = ann.xAcceleration();
+        this.yAcceleration = ann.yAcceleration();
     }
 
     GravityMotionSprite(int x, int y)
     {
         super(x, y);
+        Element ann = this.getClass().getAnnotation(Element.class);
+        setXSpeed(0);
+        this.xAcceleration = ann.xAcceleration();
+        this.yAcceleration = ann.yAcceleration();
     }
 
     public void setGroundFLag(boolean onTheGround)

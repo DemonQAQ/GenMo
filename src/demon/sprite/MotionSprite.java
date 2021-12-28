@@ -8,15 +8,14 @@ package demon.sprite;
  */
 public class MotionSprite extends Sprite
 {
-    float xSpeed = 3.0f, ySpeed = 0.0f;
-    protected float xAcceleration = 2.2f;//水平加速度
+    float xSpeed = 1.0f, ySpeed = 0.0f;
+    protected float xAcceleration = 0.5f;//水平加速度
     protected float yAcceleration = 24.0f;//垂直加速度
-    protected float xSpeedMax = 10.0f;//水平速度最大值
+    protected float xSpeedMax = 8.0f;//水平速度最大值
 
     MotionSprite()
     {
     }
-
     MotionSprite(int x, int y)
     {
         super(x, y);

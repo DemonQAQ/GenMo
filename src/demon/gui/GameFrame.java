@@ -41,7 +41,7 @@ public class GameFrame extends JFrame
         Ground ground = new Ground("ground.png");
         Player player = new Player(0,0);
         GameContent content = new GameContent(player,ground);
-        GamePanel panel = new GamePanel(ground,player,content);
+        GamePanel panel = new GamePanel(player,content);
         panel.setVisible(true);
         this.add(panel);
         CommonUtils.task(5,()->

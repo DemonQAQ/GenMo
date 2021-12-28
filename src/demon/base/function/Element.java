@@ -21,13 +21,19 @@ public @interface Element
 
     String value() default NOTHING;//图片
 
-    String leftImage() default NOTHING;//左边图片
-
-    String rightImage() default NOTHING;//右边图片
+    String Image() default NOTHING;//左边图片
 
     int width() default Constant.ELEMENT_SIZE;//宽度
 
     int height() default Constant.ELEMENT_SIZE;//高度
+
+    int crashWidth() default Constant.ELEMENT_SIZE;
+
+    int crashHeight() default Constant.ELEMENT_SIZE;
+
+    float xAcceleration() default 1.0f;
+
+    float yAcceleration() default 24.0f;
 
     Direction direction() default Direction.LEFT;//方向
 
