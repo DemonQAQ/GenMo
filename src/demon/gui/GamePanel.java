@@ -1,6 +1,7 @@
 package demon.gui;
 
 import demon.util.CommonUtils;
+import demon.util.Constant;
 import demon.util.GDraw;
 
 import java.awt.*;
@@ -27,9 +28,9 @@ public class GamePanel extends JPanel
     //缓冲画图
     public void drawBufferedImage()
     {
-        image = createImage(this.getWidth(),this.getHeight());
+        image = createImage(Constant.FRAME_WIDTH,Constant.FRAME_HEIGHT);
         Graphics g = image.getGraphics();
-        g.drawImage(backgroundImage,0,0,this.getWidth(),this.getHeight(),this);
+        g.drawImage(backgroundImage,0,0, Constant.FRAME_WIDTH,Constant.FRAME_HEIGHT,this);
         for (GDraw draw:draws)
         {
             draw.drawImage(g);

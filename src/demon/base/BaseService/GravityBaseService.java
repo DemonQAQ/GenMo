@@ -21,7 +21,7 @@ public class GravityBaseService extends GBaseService<Gravity>
             if (!gravity.onTheGround())
             {
                 float G = g * gravity.getQuality();
-                gravity.setY((int) (gravity.getY() + G));
+                gravity.setY((int) (gravity.getY() + G - gravity.getYSPeed()));
             }
         });
     }

@@ -15,7 +15,8 @@ public enum Keys
     LEFT(KeyEvent.VK_A),
     RIGHT(KeyEvent.VK_D),
     JUMP(KeyEvent.VK_K),
-    ATTACK(KeyEvent.VK_J);
+    ATTACK(KeyEvent.VK_J),
+    SKILL1(KeyEvent.VK_L);
 
     private final static Set<Integer> keySet = new HashSet<>();
     private int keyValue;

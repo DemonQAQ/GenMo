@@ -14,8 +14,9 @@ import java.awt.*;
 public abstract class Skill extends MotionSprite
 {
      protected Player player;
+     protected Mob mob;
      protected DamageRectangleSprite damageRectangleSprite;
-     protected boolean endFlag = false;
+     private Effect effect;
 
      protected Skill()
      {
@@ -46,18 +47,15 @@ public abstract class Skill extends MotionSprite
      {
      }
 
-//     public void setKeys(Keys... keys)
-//     {
-//          this.keys=keys;
-//     }
+     public Effect getEffect()
+     {
+          return effect;
+     }
 
-//     protected boolean judgeKeys()
-//     {
-//          for (Keys key:keys)
-//          {
-//               if (!key.use())return false;
-//          }
-//          return true;
-//     }
+     public void setEffect(Effect effect)
+     {
+          this.effect = effect;
+     }
+
      protected void effect(Creature sprites){}
 }

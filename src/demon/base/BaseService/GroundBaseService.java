@@ -17,6 +17,7 @@ import java.awt.*;
 public class GroundBaseService extends GBaseService<GravityMotionSprite>
 {
     private Ground ground;
+    private Graphics g;
 
     public GroundBaseService()
     {
@@ -54,8 +55,14 @@ public class GroundBaseService extends GBaseService<GravityMotionSprite>
     @Override
     public void drawImage(Graphics g)
     {
+        this.g = g;
         ground.setX(0);
         ground.setY(Constant.GROUND_LEVEL);
         ground.drawImage(g);
+    }
+
+    public Graphics getG()
+    {
+        return this.g;
     }
 }

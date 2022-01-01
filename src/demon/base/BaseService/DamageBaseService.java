@@ -14,7 +14,7 @@ public class DamageBaseService extends GBaseService<DamageRectangleSprite>
     {
         this.getElementList().forEach(sprite ->
         {
-            sprite.action(service);
+            sprite.action(service,sprite.getTick());
         });
     }
 }

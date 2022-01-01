@@ -37,7 +37,6 @@ public @interface Element
 
     Direction direction() default Direction.LEFT;//方向
 
-    //以下属性只在敌机的子类读取
     int hp() default 50;//血量
 
     int defense() default 30;//防御力

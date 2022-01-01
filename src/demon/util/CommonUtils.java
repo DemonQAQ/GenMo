@@ -20,6 +20,7 @@ public abstract class CommonUtils
     {
         return start == end ?start:start+RANDOM.nextInt(end-start);
     }
+
     public static Image getImage(String name)
     {
         return new ImageIcon(Constant.RESOURCES_PATH+name).getImage();

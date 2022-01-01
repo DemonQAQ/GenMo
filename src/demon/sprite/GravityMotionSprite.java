@@ -48,6 +48,17 @@ public class GravityMotionSprite extends MotionSprite implements Gravity
     }
 
     @Override
+    public float getYSPeed()
+    {
+        return 0;
+    }
+
+    @Override
+    public void setYSPeed(float f)
+    {
+    }
+
+    @Override
     public int getY()
     {
         return this.y;

@@ -90,4 +90,9 @@ public class Sprite implements GDraw
     {
         return height;
     }
+
+    public void setImage(java.awt.Image image)
+    {
+        Image = image;
+    }
 }

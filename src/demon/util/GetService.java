@@ -1,9 +1,6 @@
 package demon.util;
 
-import demon.base.BaseService.CreatureBaseService;
-import demon.base.BaseService.DamageBaseService;
-import demon.base.BaseService.GravityBaseService;
-import demon.base.BaseService.GroundBaseService;
+import demon.base.BaseService.*;
 import demon.base.function.BaseService;
 import demon.sprite.DamageRectangleSprite;
 
@@ -18,7 +15,9 @@ public enum GetService
     GRAVITY(new GravityBaseService()),//重力
     GROUND(new GroundBaseService()),
     CREATURE(new CreatureBaseService()),
-    DAMAGE(new DamageBaseService());
+    DAMAGE(new DamageBaseService()),
+    PLAYER(new PlayerBaseService()),
+    EFFECT(new EffectBaseService());
 
     private GetService(BaseService service)
     {
@@ -63,4 +62,13 @@ public enum GetService
         return (DamageBaseService) GetService.DAMAGE.getService();
     }
 
+    public static PlayerBaseService getPlayer()
+    {
+        return (PlayerBaseService) GetService.PLAYER.getService();
+    }
+
+    public static EffectBaseService getEffect()
+    {
+        return (EffectBaseService) GetService.EFFECT.getService();
+    }
 }
