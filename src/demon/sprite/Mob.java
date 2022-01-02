@@ -12,6 +12,7 @@ import demon.base.function.MobAI;
  */
 public class Mob extends Creature implements MobAI
 {
+    protected CreatureState state;
 
     Mob(){}
     Mob(int x,int y)

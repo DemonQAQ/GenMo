@@ -167,16 +167,12 @@ public class Creature extends GravityMotionSprite
     }
 
     @Override
-    public void setYSPeed(float f)
-    {
-        this.ySpeed = f;
-    }
-
-    @Override
     public void drawImage(Graphics g)
     {
         super.drawImage(g);
 //        Rectangle rectangle = getRectangle();
 //        g.drawImage(CommonUtils.getImage("test.png"),rectangle.x,rectangle.y,rectangle.width,rectangle.height,null);
     }
+
+
 }

@@ -17,9 +17,9 @@ import java.util.TimerTask;
  * @Date:2021/12/27 9:01
  * @Description:
  */
-@Element(width = 200, height = 148, crashWidth = 70,crashHeight = 148,yAcceleration = 28.0f,
+@Element(width = 200, height = 148, crashWidth = 70, crashHeight = 148, yAcceleration = 28.0f,
         Image =
-        "playerIdle.gif",direction = Direction.RIGHT,hp = 5000)
+                "playerIdle.gif", direction = Direction.RIGHT, hp = 5000)
 public class Player extends Creature
 {
     private Image idle = Image;
@@ -32,9 +32,9 @@ public class Player extends Creature
     private Image hurt = CommonUtils.getImage("playerHurt.gif");
     private Image jump = CommonUtils.getImage("playerJump.gif");
     private Image cast = CommonUtils.getImage("playerCast.gif");
-    private int tick =0;
-    private PlayerAttackSkill playerAttackSkill = new PlayerAttackSkill(this,50,200);
-    private PlayerThunderBird playerThunderBird = new PlayerThunderBird(this,100,25,"thunderBird");
+    private int tick = 0;
+    private PlayerAttackSkill playerAttackSkill = new PlayerAttackSkill(this, 50, 200);
+    private PlayerThunderBird playerThunderBird = new PlayerThunderBird(this, 100, 25, "thunderBird");
 
 
     Player()
@@ -58,8 +58,8 @@ public class Player extends Creature
 
     private void executeSkill()
     {
-        if (Keys.ATTACK.use()&&!state.isAttack()) playerAttackSkill.action();
-        if (Keys.SKILL1.use()&&!state.isSkillThunderBird())playerThunderBird.action();
+        if (Keys.ATTACK.use() && !state.isAttack()) playerAttackSkill.action();
+        if (Keys.SKILL1.use() && !state.isSkillThunderBird()) playerThunderBird.action();
     }
 
     @Override
@@ -99,7 +99,7 @@ public class Player extends Creature
                     @Override
                     public void run()
                     {
-                        tick=0;
+                        tick = 0;
                         cancel();
                     }
                 }, 500);
@@ -109,17 +109,15 @@ public class Player extends Creature
         {
             if (this.state.isAttack1())
             {
-                this.Image=attack;
-            }
-            else if(this.state.isAttack2())
+                this.Image = attack;
+            } else if (this.state.isAttack2())
             {
-                this.Image=attack2;
-            }
-            else
+                this.Image = attack2;
+            } else
             {
-                this.Image=attack3;
+                this.Image = attack3;
             }
-            if (this.direction == Direction.RIGHT);
+            if (this.direction == Direction.RIGHT) ;
             else this.Image = FlipImage.flipImage(this.Image);
             return;
         }
@@ -150,7 +148,7 @@ public class Player extends Creature
         if (state.isIdle())
         {
             tick++;
-            if (tick>50)
+            if (tick > 50)
             {
                 state.setAttack1(false);
                 state.setAttack2(false);
@@ -173,7 +171,7 @@ public class Player extends Creature
             return;
         }
         //水平移动
-        if (Keys.LEFT.use()&&!state.isAttack())
+        if (Keys.LEFT.use() && !state.isAttack())
         {
             if (this.x > Constant.LEFT_EDGE)
             {
@@ -183,7 +181,7 @@ public class Player extends Creature
             }
             this.direction = Direction.LEFT;//更改玩家方向
             return;
-        } else if (Keys.RIGHT.use()&&!state.isAttack())
+        } else if (Keys.RIGHT.use() && !state.isAttack())
         {
             if (this.x <= Constant.RIGHT_EDGE)
             {
@@ -209,7 +207,7 @@ public class Player extends Creature
             } else if (this.ySpeed > 0)
             {
                 this.ySpeed -= 1;
-                if (ySpeed<=0)
+                if (ySpeed <= 0)
                 {
                     state.setFly(true);
                     state.setJump(false);
@@ -219,7 +217,7 @@ public class Player extends Creature
         } else
         {
             ySpeed = 0;
-            if (!onTheGround())state.setFly(true);
+            if (!onTheGround()) state.setFly(true);
             state.setJump(false);
         }
     }

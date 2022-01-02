@@ -11,7 +11,8 @@ import demon.base.function.Gravity;
  */
 public class GravityMotionSprite extends MotionSprite implements Gravity
 {
-    boolean onTheGround = false;
+    protected float quality = 50;
+    protected boolean onTheGround = false;
 
     GravityMotionSprite()
     {
@@ -44,18 +45,13 @@ public class GravityMotionSprite extends MotionSprite implements Gravity
     @Override
     public float getQuality()
     {
-        return 50;
+        return this.quality;
     }
 
     @Override
     public float getYSPeed()
     {
         return 0;
-    }
-
-    @Override
-    public void setYSPeed(float f)
-    {
     }
 
     @Override
@@ -68,5 +64,10 @@ public class GravityMotionSprite extends MotionSprite implements Gravity
     public void setY(int y)
     {
         this.y = y;
+    }
+
+    public void setQuality(float quality)
+    {
+        this.quality = quality;
     }
 }

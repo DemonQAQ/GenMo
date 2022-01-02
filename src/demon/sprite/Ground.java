@@ -31,12 +31,6 @@ public class Ground extends MotionlessSprite
         return false;
     }
 
-    private <E extends Gravity> boolean fallDownGround(E sprite)
-    {
-        sprite.onTheGround();
-        return true;
-    }
-
     private boolean checkGravity(Sprite sprite)
      {
          if (sprite instanceof Gravity)return true;

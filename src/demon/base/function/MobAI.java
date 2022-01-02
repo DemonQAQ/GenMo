@@ -8,6 +8,6 @@ package demon.base.function;
  */
 public interface MobAI
 {
-    public void autoXMove();
-    public void autoYMove();
+     void autoXMove();
+     void autoYMove();
 }

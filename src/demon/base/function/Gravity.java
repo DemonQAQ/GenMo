@@ -11,7 +11,6 @@ public interface Gravity
     boolean onTheGround();
     float getQuality();
     float getYSPeed();
-    void setYSPeed(float f);
     int getY();
     void setY(int y);
 }
